@@ -40,7 +40,7 @@ app.route('/session')
     })
 
 app.get('/', (req, res) => {
-    res.redirect('https://example.com'); //maib url
+    res.redirect('https://example.com'); //main url
 });
 
 const server = app.listen(port, '0.0.0.0', () => {
