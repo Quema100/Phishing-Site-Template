@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link href="/css/login.css" rel="stylesheet">
+    <script src="/js/login.js"></script>
+</head>
+
+<body>
+    <form method="post" action="/session">
+        <input id="idInput" type="text" name="id" placeholder="ID" required
+            oninvalid="this.setCustomValidity('Input your ID')" oninput="this.setCustomValidity('')" nonce="{{nonce}}">
+        <input id="passwordInput" type="password" name="userPassword" placeholder="Password" required
+            oninvalid="this.setCustomValidity('Input your Password')" oninput="this.setCustomValidity('')"
+            nonce="{{nonce}}">
+        <input type="submit" value="Sign In" required>
+    </form>
+</body>
+
+</html>
